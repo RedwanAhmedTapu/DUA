@@ -1,9 +1,11 @@
 import React from "react";
 import { 
-  Globe, 
   Settings as SettingsIcon, 
   Type, 
-  Palette 
+  Palette, 
+  Languages,
+  Grid,
+  Grid2X2
 } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
 import { Switch } from "../ui/switch";
@@ -14,7 +16,7 @@ export const RightSidebar = (): JSX.Element => {
     {
       id: "language",
       title: "Language Settings",
-      icon: Globe,
+      icon: Languages,
       isActive: false,
     },
     {
@@ -26,13 +28,13 @@ export const RightSidebar = (): JSX.Element => {
     {
       id: "font",
       title: "Font Settings",
-      icon: Type,
+      icon: Grid2X2,
       isActive: false,
     },
     {
       id: "appearance",
       title: "Appearance Settings",
-      icon: Palette,
+      icon: Grid2X2,
       isActive: true,
     },
   ];
