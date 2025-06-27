@@ -32,7 +32,7 @@ export const ContentSection = (): JSX.Element => {
   const subcategoryId = 1; // Can be dynamic
 
   useEffect(() => {
-    fetch(`http://localhost:5000/duas?subcategory_id=${subcategoryId}`)
+    fetch(`https://duabackend-jveg.onrender.com/duas?subcategory_id=${subcategoryId}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch");
         return res.json();

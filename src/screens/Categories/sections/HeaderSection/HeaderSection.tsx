@@ -30,7 +30,7 @@ export const HeaderSection = (): JSX.Element => {
   const [expandedCategoryId, setExpandedCategoryId] = useState<number | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/categories")
+    fetch("https://duabackend-jveg.onrender.com/categories")
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
@@ -44,7 +44,7 @@ export const HeaderSection = (): JSX.Element => {
   const fetchSubcategories = (catId: number) => {
     // Only fetch if we haven't already loaded these subcategories
     if (!subcategories[catId]) {
-      fetch(`http://localhost:5000/subcategories?category_id=${catId}`)
+      fetch(`https://duabackend-jveg.onrender.com/subcategories?category_id=${catId}`)
         .then((res) => res.json())
         .then((data) => {
           setSubcategories(prev => ({

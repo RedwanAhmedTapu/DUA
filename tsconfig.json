@@ -1,11 +1,13 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
+  "compilerOptions": {
+    "moduleResolution": "node",          // To help resolve modules properly
+    "resolveJsonModule": true,           // If you're using JSON files
+    "esModuleInterop": true,             // For compatibility with CommonJS
+    "strict": true,                      // Optional but recommended for stricter typing
+    "jsx": "react-jsx",                  // Enable JSX in React projects
+    "allowSyntheticDefaultImports": true // Allows default imports from non-ES modules
+  },
+  "include": [
+    "src/**/*"
   ]
 }
